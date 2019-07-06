@@ -1,0 +1,15 @@
+---------- hall of fame ----------
+Input: 4
+Total eligible students: 8
+Qualified students:
+2008ECE1223 / 4.8
+2008ECE1225 / 5.0
+2008MEC1222 / 4.9
+2008CSC1224 / 4.5
+2008CSC1225 / 5.0
+2008MEC1225 / 5.0
+2008ARC1224 / 4.9
+2008ARC1225 / 5.0
+
+
+[[CSE,12, 45], [MES], ]

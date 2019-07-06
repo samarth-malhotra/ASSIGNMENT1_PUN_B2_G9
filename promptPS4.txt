@@ -1,0 +1,2 @@
+hallOfFame: 4.9
+courseOffer: 3.5 : 4.0
