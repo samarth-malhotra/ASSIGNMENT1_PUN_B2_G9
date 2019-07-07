@@ -77,7 +77,7 @@ class StudentHashTable:
         for student in StudentHashRecords.students:
             if student is not None:
                 department = student[0][4:7];
-                if student[0][4:7] in department_list:
+                if department in department_list:
                     department_list[department_list.index(department) + 1].append(student[1])
                 else:
                     department_list.append(department)
