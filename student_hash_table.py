@@ -87,7 +87,7 @@ class StudentHashTable:
         for department in department_list:
             if isinstance(department, str):
                 list_index = department_list.index(department) + 1;
-                marks = department_list[department_list.index(department) + 1];
+                marks = department_list[list_index];
                 output_file.write(f"\n{department},: max: {max(marks)}, avg: {sum(marks) / len(marks):.2f}")
         output_file.write("\n-------------------------------------\n")
         output_file.close()
