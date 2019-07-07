@@ -18,7 +18,8 @@ class StudentHashTable:
         students_List = ""
         for student in self.students:
             if student is not None:
-                students_List += str(self.students.index(student)) + str(student) + "\n"
+                students_List += str(self.students.index(student)
+                                     ) + str(student) + "\n"
         return students_List
 
     # Method to insert student record in hash table.
@@ -46,7 +47,8 @@ class StudentHashTable:
         output_file = open("outputPS4.txt", "a+")
         output_file.write("\n---------- hall of fame ----------")
         output_file.write("\nInput: " + str(CGPA))
-        output_file.write("\nTotal eligible students: " + str(len(qualified_students)))
+        output_file.write("\nTotal eligible students: " +
+                          str(len(qualified_students)))
         output_file.write("\nQualified students:")
         for student in qualified_students:
             output_file.write("\n" + student[0] + " / " + str(student[1]))
@@ -65,7 +67,8 @@ class StudentHashTable:
         output_file.write("\n---------- New Course Candidates ----------")
         output_file.write("\nInput: " + str(CGPAFrom))
         output_file.write(" to " + str(CGPATo))
-        output_file.write("\nTotal eligible students: " + str(len(qualified_students)))
+        output_file.write("\nTotal eligible students: " +
+                          str(len(qualified_students)))
         output_file.write("\nQualified students:")
         for student in qualified_students:
             output_file.write("\n" + student[0] + " / " + str(student[1]))
@@ -73,22 +76,25 @@ class StudentHashTable:
         output_file.close()
 
     def depAvg(StudentHashRecords):
-        department_list = [];
+        department_list = []
         for student in StudentHashRecords.students:
             if student is not None:
-                department = student[0][4:7];
+                department = student[0][4:7]
                 if department in department_list:
-                    department_list[department_list.index(department) + 1].append(student[1])
+                    department_list[department_list.index(
+                        department) + 1].append(student[1])
                 else:
                     department_list.append(department)
                     department_list.append([student[1]])
         output_file = open("outputPS4.txt", "a+")
-        output_file.write("\n---------- Department CGPA this is new stuff----------")
+        output_file.write(
+            "\n---------- Department CGPA this is new stuff----------")
         for department in department_list:
             if isinstance(department, str):
-                list_index = department_list.index(department) + 1;
-                marks = department_list[list_index];
-                output_file.write(f"\n{department},: max: {max(marks)}, avg: {sum(marks) / len(marks):.2f}")
+                list_index = department_list.index(department) + 1
+                marks = department_list[list_index]
+                output_file.write(
+                    f"\n{department},: max: {max(marks)}, avg: {sum(marks) / len(marks):.2f}")
         output_file.write("\n-------------------------------------\n")
         output_file.close()
 
