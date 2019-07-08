@@ -88,7 +88,7 @@ class StudentHashTable:
                     department_list.append([student[1]])
         output_file = open("outputPS4.txt", "a+")
         output_file.write(
-            "\n---------- Department CGPA this is new stuff----------")
+            "\n---------- Department CGPA ----------")
         for department in department_list:
             if isinstance(department, str):
                 list_index = department_list.index(department) + 1
