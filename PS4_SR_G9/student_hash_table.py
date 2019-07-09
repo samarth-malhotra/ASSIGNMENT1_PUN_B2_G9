@@ -44,7 +44,7 @@ class StudentHashTable:
             if (student is not None) and (student[1] > CGPA):
                 qualified_students.append(student)
 
-        output_file = open("outputPS4.txt", "a+")
+        output_file = open("../outputPS4.txt", "a+")
         output_file.write("\n---------- hall of fame ----------")
         output_file.write("\nInput: " + str(CGPA))
         output_file.write("\nTotal eligible students: " +
@@ -63,7 +63,7 @@ class StudentHashTable:
             if (student is not None) and (student[1] > CGPAFrom) and (student[1] < CGPATo):
                 qualified_students.append(student)
 
-        output_file = open("outputPS4.txt", "a+")
+        output_file = open("../outputPS4.txt", "a+")
         output_file.write("\n---------- New Course Candidates ----------")
         output_file.write("\nInput: " + str(CGPAFrom))
         output_file.write(" to " + str(CGPATo))
@@ -86,7 +86,7 @@ class StudentHashTable:
                 else:
                     department_list.append(department)
                     department_list.append([student[1]])
-        output_file = open("outputPS4.txt", "a+")
+        output_file = open("../outputPS4.txt", "a+")
         output_file.write(
             "\n---------- Department CGPA ----------")
         for department in department_list:

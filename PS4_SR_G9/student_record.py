@@ -4,7 +4,7 @@ StudentHashRecords = sh.StudentHashTable()
 StudentHashRecords.initializeHash()
 
 # Read student records from inputPS4.txt
-input_file = open("inputPS4.txt")
+input_file = open("../inputPS4.txt")
 for record in input_file.readlines():
     student = record.split(" / ")
     studentId = student[0]
@@ -12,14 +12,14 @@ for record in input_file.readlines():
     StudentHashRecords.insertStudentRec(studentId, CGPA)
 
 # Print HallOfFame list
-prompt_file = open("promptPS4.txt")
+prompt_file = open("../promptPS4.txt")
 for record in prompt_file.readlines():
     if "hallOfFame" in record:
         CGPA_hf = float(record.split(":")[1])
 StudentHashRecords.hallOfFame(CGPA_hf)
 
 # Print Course Offer list
-prompt_file = open("promptPS4.txt")
+prompt_file = open("../promptPS4.txt")
 for record in prompt_file.readlines():
     if "courseOffer" in record:
         CGPAFrom = float(record.split(":")[1])
