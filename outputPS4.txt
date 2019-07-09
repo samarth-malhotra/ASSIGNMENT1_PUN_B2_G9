@@ -43,3 +43,34 @@ ARC,: max: 5.0, avg: 3.94
 MEC,: max: 5.0, avg: 4.28
 CSC,: max: 5.0, avg: 4.06
 -------------------------------------
+
+---------- hall of fame ----------
+Input: 4.9
+Total eligible students: 4
+Qualified students:
+2008ECE1225 / 5.0
+2008CSC1225 / 5.0
+2008MEC1225 / 5.0
+2008ARC1225 / 5.0
+-------------------------------------
+
+---------- New Course Candidates ----------
+Input: 3.5 to 4.0
+Total eligible students: 8
+Qualified students:
+2008ECE1222 / 3.6
+2008ECE1224 / 3.9
+2008MEC1221 / 3.7
+2008MEC1223 / 3.8
+2008CSC1222 / 3.7
+2008CSC1223 / 3.9
+2008ARC1222 / 3.7
+2008ARC1223 / 3.6
+-------------------------------------
+
+---------- Department CGPA ----------
+ECE,: max: 5.0, avg: 4.16
+ARC,: max: 5.0, avg: 3.94
+MEC,: max: 5.0, avg: 4.28
+CSC,: max: 5.0, avg: 4.06
+-------------------------------------
