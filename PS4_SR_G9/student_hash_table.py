@@ -3,7 +3,7 @@ class StudentHashTable:
 
     # Create empty hash table
     def initializeHash(self):
-        self.size = 300
+        self.size = 301
         self.students = [None] * self.size
 
     # Method to create Hash Id
