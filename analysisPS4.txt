@@ -1,62 +1,72 @@
 Time Complexity -
 
-1. Insert Student Records - (insertStudentRec)
-   This function is to store all students in hash table.
-   Assumption, n number of students are there.
+1. Initializes an empty list of constant size - initializeHash()
+   As the function dosen't have any iteration or recursion the time complexity for this function is constant
+
+   => Time complexity will be order of O(1).
+
+2. Insert Student Records - insertStudentRec()
+   This function stores all students in hash table.
+   Assumption: number of students is n.
    for(i=1; i<=n; i++) { ->  n is total number of students
      for ( j=0; j<= k; j++) { --> k is length of student id, to create hash value.
-	<Hash Value> -- This statement will execute n*k times
+	     <Compute Hash Value> -- This statement will execute n*k times
      }
-	 <Insert statement> --This statement will execute n times
+	<Insert student> --This statement will execute n times
     }
 	
-   =>Time complexity will be order of O(n*k).
+   => Time complexity will be order of O(n).
 	
 	
-2. Hall Of Fame - (hallOfFame)
+3. Hall Of Fame - hallOfFame()
    
-   This funtion will return list of student, those have CGPA greater than pass to the function.
+   This funtion returns list of all students who have a CGPA greater than the CGPA passed to the function
    
-   Assumption - Let's assume, n number of studets are exist.
-   First iteration will fetch list of qulified student. Iteration will execute n times. Time complexity will be order of O(n).
-   for(i=0; i<n; i++) ->  n is total number of student
+   Assumption: number of students is n.
+   First iteration will execute n times and fetch list of qualified students. Time complexity will be order of O(n).
+   for(i=0; i<n; i++){} ->  n is total number of students
    
-   Subsequent iteration is to print qualified student's list. 
-   Assumption, maximum all students qualified for hall of fame. Iteration will execute n times. Time complexity will be order of O(n).
-   for(i=0; i<n; i++) -> n is qualified students
+   Subsequent iteration will create a string of qualified student's list. 
+   Assumption: maximum n students are qualified for hall of fame, iteration will execute n times therefore time complexity will be order of O(n).
+   for(i=0; i<n; i++){} -> n is qualified students
    
    => n+n = 2n 
    => Time complexity is O(n).
 
    
-3. New Course List - (newCourseList)
+4. New Course List - newCourseList()
    
-   This funtion will return list of student, those have CGPA between the given criteria.
+   This funtion will return the list of all students who have a CGPA within the given range and have graduated in the last 5 years.
    
-   Assumption - Let's assume, n number of studets are exist.
-   First iteration will fetch list of qulified student for new course. Iteration will execute n times. Time complexity will be order of O(n).
-   for(i=0; i<n; i++) ->  n is total number of student
+   Assumption: number of students is n.
+   First iteration will execute n times and fetch list of qualified students. Time complexity will be order of O(n).
+   for(i=0; i<n; i++){} ->  n is total number of student
    
-   Subsequent iteration is to print students list qualified for new course. 
-   Assumption, maximum all students qualified for new course. Iteration will execute n times. Time complexity will be order of O(n).
-   for(i=0; i<n; i++) -> n is qualified students for new course
+   Subsequent iteration will create a string of qualified student's list. 
+   Assumption: maximum n students are qualified for new course, iteration will execute n times therefore time complexity will be order of O(n).
+   for(i=0; i<n; i++){} -> n is qualified students for new course
    
    => n+n = 2n
    => Time complexity is O(n).  
    
    
-4. Department List with Max and Avg CPGA - (depAvg)
+5. Department List with Max and Avg CPGA - depAvg()
    
-   This funtion will return list of department with max and average CGPA
+   This funtion will return the list of all departments followed by the maximum CGPA and average CGPA of all students in that department.
    
-   Assumption - Let's assume, n number of studets are exist.
+   Assumption: number of students is n.
    First iteration will evaluate each student id to get corresponding department and CGPA.
-   Iteration will execute n times. It will store department wise CPGA.Iteration will execute n times. Time complexity will be order of O(n).
-   for(i=0; i<n; i++) ->  n is total number of student
+   This iteration will execute n times. It will store department wise CPGA. Time complexity will be order of O(n).
+   for(i=0; i<n; i++){} ->  n is total number of students
    
-   Subsequent iteration is to print Average and Max CPGA for individual department. 
-   for(i=0; i<p; i++) -> p is number of unique departments. It will iterate p number times fetch avg and max cpga for individual departments.
+   Subsequent iteration will create a string with Average and Max CPGA for individual department. 
+   for(i=0; i<p; i++){} -> p is number of unique departments. It will iterate p times and will compute avg and max cpga for each department.
    So, time complexity of this iteration will be order of O(p).
        
    => n+p 
-   => Time complexity is O(n+p).  
+   => Time complexity is O(n).  
+
+6. Destroys the hash table - destroyHash()
+   As the function dosen't have any iteration or recursion the time complexity for this function is constant
+   
+   => Time complexity will be order of O(1).
