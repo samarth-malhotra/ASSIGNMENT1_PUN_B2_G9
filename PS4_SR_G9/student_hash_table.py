@@ -1,4 +1,8 @@
+import datetime
+
 # Hash table for students
+
+
 class StudentHashTable:
 
     # Create empty hash table
@@ -43,7 +47,8 @@ class StudentHashTable:
                 qualified_students.append(student)
         hall_of_fame = "\n---------- hall of fame ----------"
         hall_of_fame += "\nInput: " + str(CGPA)
-        hall_of_fame += "\nTotal eligible students: " + str(len(qualified_students))
+        hall_of_fame += "\nTotal eligible students: " + \
+            str(len(qualified_students))
         hall_of_fame += "\nQualified students:"
         for student in qualified_students:
             hall_of_fame += "\n" + student[0] + " / " + str(student[1])
@@ -54,11 +59,12 @@ class StudentHashTable:
     def newCourseList(StudentHashRecords, CGPAFrom, CGPATo):
         qualified_students = []
         for student in StudentHashRecords.students:
-            if (student is not None) and (student[1] > CGPAFrom) and (student[1] < CGPATo):
+            if (student is not None) and (student[1] > CGPAFrom) and (student[1] < CGPATo) and (int(student[0][:4]) > (datetime.datetime.now().year - 5)):
                 qualified_students.append(student)
         new_course_list = "\n---------- New Course Candidates ----------"
         new_course_list += "\nInput: " + str(CGPAFrom) + " to " + str(CGPATo)
-        new_course_list += "\nTotal eligible students: " + str(len(qualified_students))
+        new_course_list += "\nTotal eligible students: " + \
+            str(len(qualified_students))
         new_course_list += "\nQualified students:"
         for student in qualified_students:
             new_course_list += "\n" + student[0] + " / " + str(student[1])
@@ -87,5 +93,5 @@ class StudentHashTable:
         return dep_avg
 
     # Method to destroy the hash table
-    def destroyHash(self):
-        self.students = [None] * self.size
+    def destroyHash(StudentHashRecords):
+        StudentHashRecords.students = [None] * StudentHashRecords.size
