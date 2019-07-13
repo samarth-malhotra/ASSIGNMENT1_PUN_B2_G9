@@ -59,7 +59,7 @@ class StudentHashTable:
     def newCourseList(StudentHashRecords, CGPAFrom, CGPATo):
         qualified_students = []
         for student in StudentHashRecords.students:
-            if (student is not None) and (student[1] > CGPAFrom) and (student[1] < CGPATo) and (int(student[0][:4]) > (datetime.datetime.now().year - 5)):
+            if (student is not None) and (student[1] > CGPAFrom) and (student[1] < CGPATo) and ((int(student[0][:4]) + 4) > (datetime.datetime.now().year - 5)):
                 qualified_students.append(student)
         new_course_list = "\n---------- New Course Candidates ----------"
         new_course_list += "\nInput: " + str(CGPAFrom) + " to " + str(CGPATo)
