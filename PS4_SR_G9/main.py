@@ -10,7 +10,7 @@ try:
         student = record.split(" / ")
         studentId = student[0]
         CGPA = float(student[1])
-        StudentHashRecords.insertStudentRec(studentId, CGPA)
+        sh.insertStudentRec(StudentHashRecords, studentId, CGPA)
 except FileNotFoundError as fe:
     print(fe)
 except IOError as ioe:
@@ -24,7 +24,7 @@ try:
     for record in prompt_file.readlines():
         if "hallOfFame" in record:
             CGPA_hf = float(record.split(":")[1])
-    hall_of_fame = StudentHashRecords.hallOfFame(CGPA_hf)
+    hall_of_fame = sh.hallOfFame(StudentHashRecords, CGPA_hf)
     output_file = open("../outputPS4.txt", "w+")
     output_file.write(hall_of_fame)
     output_file.close()
@@ -43,7 +43,7 @@ try:
         if "courseOffer" in record:
             CGPAFrom = float(record.split(":")[1])
             CGPATo = float(record.split(":")[2])
-    new_course_list = StudentHashRecords.newCourseList(CGPAFrom, CGPATo)
+    new_course_list = sh.newCourseList(StudentHashRecords, CGPAFrom, CGPATo)
     output_file = open("../outputPS4.txt", "a+")
     output_file.write(new_course_list)
     output_file.close()
@@ -57,7 +57,7 @@ finally:
 # Print average CGPA department wise
 try:
     output_file = open("../outputPS4.txt", "a+")
-    output_file.write(StudentHashRecords.depAvg())
+    output_file.write(sh.depAvg(StudentHashRecords))
     output_file.close()
 except FileNotFoundError as fe:
     print(fe)
@@ -66,4 +66,4 @@ except IOError as ioe:
 finally:
     output_file.close()
 
-StudentHashRecords.destroyHash()
+sh.destroyHash(StudentHashRecords)
