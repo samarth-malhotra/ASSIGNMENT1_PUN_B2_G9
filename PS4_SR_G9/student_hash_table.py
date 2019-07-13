@@ -26,7 +26,7 @@ class StudentHashTable:
                                      ) + str(student) + "\n"
         return students_List
 
-# Method to insert student record in hash table.
+# Function to insert student record in hash table.
 def insertStudentRec(StudentHashRecords, studentId, CGPA):
     next_slot = 0
     student = [studentId, CGPA]
@@ -39,7 +39,7 @@ def insertStudentRec(StudentHashRecords, studentId, CGPA):
             # quadratic probing
             next_slot += 1
 
-# Method to create HallofFame output file
+# Function to create HallofFame output file
 def hallOfFame(StudentHashRecords, CGPA):
     qualified_students = []
     for student in StudentHashRecords.students:
@@ -55,7 +55,7 @@ def hallOfFame(StudentHashRecords, CGPA):
     hall_of_fame += "\n-------------------------------------\n"
     return hall_of_fame
 
-# Method to create the New Course List
+# Function to create the New Course List
 def newCourseList(StudentHashRecords, CGPAFrom, CGPATo):
     qualified_students = []
     for student in StudentHashRecords.students:
@@ -71,7 +71,7 @@ def newCourseList(StudentHashRecords, CGPAFrom, CGPATo):
     new_course_list += "\n-------------------------------------\n"
     return new_course_list
 
-# Method to create department list with average and max
+# Function to create department list with average and max
 def depAvg(StudentHashRecords):
     department_list = []
     for student in StudentHashRecords.students:
@@ -92,6 +92,6 @@ def depAvg(StudentHashRecords):
     dep_avg += "\n-------------------------------------\n"
     return dep_avg
 
-# Method to destroy the hash table
+# Function to destroy the hash table
 def destroyHash(StudentHashRecords):
     StudentHashRecords.students = [None] * StudentHashRecords.size

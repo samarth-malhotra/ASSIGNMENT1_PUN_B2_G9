@@ -1,11 +1,16 @@
 Time Complexity -
 
 1. Initializes an empty list of constant size - initializeHash()
-   As the function dosen't have any iteration or recursion the time complexity for this function is constant
+   As the method dosen't have any iteration or recursion the time complexity for this method is constant
 
    => Time complexity will be order of O(1).
 
-2. Insert Student Records - insertStudentRec()
+2. Generates hash value for every student Id - HashId()
+   As the method execution does not depend on the input size the time complexity for this method is constant
+
+   => Time complexity will be order of O(1).
+
+3. Insert Student Records - insertStudentRec()
    This function stores all students in hash table.
    Assumption: number of students is n.
    for(i=1; i<=n; i++) { ->  n is total number of students
@@ -18,7 +23,7 @@ Time Complexity -
    => Time complexity will be order of O(n).
 	
 	
-3. Hall Of Fame - hallOfFame()
+4. Hall Of Fame - hallOfFame()
    
    This funtion returns list of all students who have a CGPA greater than the CGPA passed to the function
    
@@ -34,7 +39,7 @@ Time Complexity -
    => Time complexity is O(n).
 
    
-4. New Course List - newCourseList()
+5. New Course List - newCourseList()
    
    This funtion will return the list of all students who have a CGPA within the given range and have graduated in the last 5 years.
    
@@ -50,7 +55,7 @@ Time Complexity -
    => Time complexity is O(n).  
    
    
-5. Department List with Max and Avg CPGA - depAvg()
+6. Department List with Max and Avg CPGA - depAvg()
    
    This funtion will return the list of all departments followed by the maximum CGPA and average CGPA of all students in that department.
    
@@ -66,7 +71,7 @@ Time Complexity -
    => n+p 
    => Time complexity is O(n).  
 
-6. Destroys the hash table - destroyHash()
+7. Destroys the hash table - destroyHash()
    As the function dosen't have any iteration or recursion the time complexity for this function is constant
    
    => Time complexity will be order of O(1).
